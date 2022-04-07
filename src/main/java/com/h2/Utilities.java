@@ -8,8 +8,8 @@ public class Utilities {
 
         try {
             out = Long.parseLong(in);
-        } catch (IllegalArgumentException e) {
-            System.out.println(in + " cannot be converted into a 'long' value. Exiting program.");
+        } catch (Exception e) {
+            throw new IllegalArgumentException(in + " cannot be converted into a 'int' value. Exiting program.");
         }
         return out;
     }
@@ -20,8 +20,8 @@ public class Utilities {
 
         try {
             out = Integer.parseInt(in);
-        } catch (IllegalArgumentException e) {
-            System.out.println(in + " cannot be converted into a 'int' value. Exiting program.");
+        } catch (Exception e) {
+            throw new IllegalArgumentException(in + " cannot be converted into a 'int' value. Exiting program.");
         }
         return out;
     }
@@ -32,8 +32,8 @@ public class Utilities {
 
         try {
             out = Float.parseFloat(in);
-        } catch (IllegalArgumentException e) {
-            System.out.println(in + " cannot be converted into a 'float' value. Exiting program.");
+        } catch (Exception e) {
+            throw new IllegalArgumentException(in + " cannot be converted into a 'int' value. Exiting program.");
         }
         return out;
     }
