@@ -32,7 +32,7 @@ public class Finance {
 
         executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
     }
-    
+
     private static boolean validateCommandArguments(String[] args) {
 
         switch (args[0]) {
