@@ -60,12 +60,10 @@ public class SavingsCalculator {
 
         int totalDaysInMonth = yearMonth.lengthOfMonth();
 
-        int remainingDays = totalDaysInMonth - date.getDayOfMonth();
-
-        return remainingDays;
+        return totalDaysInMonth - date.getDayOfMonth();
     }
 
-    private float calculate() {
+    public float calculate() {
         return sumOfCredits() - sumOfDebits();
     }
 }
