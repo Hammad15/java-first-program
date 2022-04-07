@@ -2,7 +2,6 @@ import com.h2.BestLoanRates;
 import com.h2.MortgageCalculator;
 import com.h2.SavingsCalculator;
 
-import java.beans.beancontext.BeanContext;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -27,13 +26,13 @@ public class Finance {
         boolean isValidCommand = validateCommandArguments(args);
 
         if (!isValidCommand) {
-            commandsToUsage.get(command);
+            System.out.println(commandsToUsage.get(args[0]));
             return;
         }
 
         executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
     }
-
+    
     private static boolean validateCommandArguments(String[] args) {
 
         switch (args[0]) {
